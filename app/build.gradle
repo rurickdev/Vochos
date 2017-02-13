@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "mosaicogeek.skintigth.learning.vochostest"
+        minSdkVersion 21
+        targetSdkVersion 21
+        versionCode 6
+        versionName "release 1"
+    }
+    signingConfigs {
+        release {
+            storeFile file("almacenLlaves.keystore")
+            storePassword "SkinDEV94?"
+            keyAlias "skintigth"
+            keyPassword "SkinDEV94?"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:cardview-v7:21.0.3'
+    compile 'com.android.support:recyclerview-v7:21.0.3'
+}

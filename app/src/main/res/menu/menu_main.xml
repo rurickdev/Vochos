@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/guardar"
+        android:title="Guardar"
+        android:icon="@drawable/cloud_upload_white_192x192"
+        android:orderInCategory="90"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/info"
+        android:title="Historial"
+        android:icon="@drawable/history3"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/borrar"
+        android:title="Borrar"
+        android:icon="@drawable/refresh"
+        android:orderInCategory="80"
+        app:showAsAction="always" />
+
+</menu>
